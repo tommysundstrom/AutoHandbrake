@@ -6,7 +6,7 @@
 #  Copyright (c) 2009 Helt Enkelt ab. All rights reserved.
 #
 
-require 'test_setup'
+require '../test_setup'
 require 'log'
 require 'tommys_utilities'
 

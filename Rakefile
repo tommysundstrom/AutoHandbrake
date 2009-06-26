@@ -7,7 +7,7 @@ require 'rake/testtask'
 require 'pathname'
 
 # Application own Settings
-APPNAME               = "GTDhub"
+APPNAME               = "AutoHandbrake"
 TARGET                = "#{APPNAME}.app"
 APPVERSION            = Time.now.strftime("%Y-%m-%d")
 PUBLISH               = 'yourname@yourhost:path'

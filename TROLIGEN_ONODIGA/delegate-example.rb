@@ -7,7 +7,7 @@
 # Visit http://www.pragmaticprogrammer.com/titles/bmrc for more book information.
 #---
 require File.expand_path("#{File.dirname(__FILE__)}/../../sandbox")
-require 'testutil'
+require 'exempel-testutil'
 
 
 def exclaimify(notification)
