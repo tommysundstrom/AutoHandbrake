@@ -18,6 +18,7 @@
 # The sandbox library (File.expand_path('../../../sandbox/lib') is in the path.
 #
 
+require 'osx/cocoa'
 require File.expand_path("#{File.dirname(__FILE__)}/../path-setting")
 
 def RubyCocoaLocations.root_for_ruby_files   # overriding version from above.

@@ -13,8 +13,8 @@ require 'log4r'
 
 # When this source file is loaded, it cleans out old logs.
   def clean_out_log_directory(dir)
-   Pathstring(dir).children.each do |item|
-     if item.directory?
+    Pathstring(dir).children.each do |item|
+      if item.directory?
        # First clean out inside the directory
        clean_out_log_directory(item)
 
@@ -31,8 +31,8 @@ require 'log4r'
          item.unlink
        end
      end
-   end
- end
+    end
+  end
 
 
   app_name = Pathstring.new(__FILE__).application_name  # Code here is same as used inside class

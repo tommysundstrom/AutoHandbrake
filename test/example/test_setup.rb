@@ -13,6 +13,8 @@ parent = File.dirname(context)
 parent_name = File.basename(parent)
 grandparent = File.dirname(parent)
 
+Dir.chdir(parent)  # I'm not quite sure about this. But it's at least better than the rather random arrangement today.
+
 require 'osx/cocoa'
 # OSX::NSLog "Running test_setup: #{context}"
 
