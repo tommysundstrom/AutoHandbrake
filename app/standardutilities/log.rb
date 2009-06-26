@@ -141,7 +141,7 @@ class Log #< OSX::NSObject
 
       # Creating outputter
       outputter = FileOutputter.new("output_all#{id}", :filename => (@@log_directory + "#{filename}.log").to_s, :formatter => @@formatter)
-      return outputter
+      return outputter     
     end
       
   
