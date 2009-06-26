@@ -43,7 +43,7 @@ class TC_Log_test < Test::Unit::TestCase
           assert_nothing_raised { @local_log.fatal "Log.fatal to a log crated with #{__FILE__}" }
         end
         
-        should "Log warnings also to the warnings & errors log." do
+        should_eventually "Log warnings also to the warnings & errors log." do
           @local_log.warn  "Log.warn to a log crated with #{__FILE__}"
           assert { File.exist?(Pathstring('~/Library/Logs/Ruby/AutoHandbrake/WARNINGS & ERRORS.log').expand_path) }
           assert { Log.message_in_last_line_of_log('/Users/Tommy/Library/Logs/Ruby/AutoHandbrake/WARNINGS & ERRORS.log') == "[ WARN] Log.warn to a log crated with ./log-test.rb" }
