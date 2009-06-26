@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: send out an email with the current buffer
+full_name: Log4r::EmailOutputter#flush
+is_singleton: false
+name: flush
+params: ()
+visibility: public

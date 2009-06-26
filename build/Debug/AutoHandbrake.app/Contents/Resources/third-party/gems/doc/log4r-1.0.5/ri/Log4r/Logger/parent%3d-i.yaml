@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Please don't reset the parent
+full_name: Log4r::Logger#parent=
+is_singleton: false
+name: parent=
+params: (parent)
+visibility: public

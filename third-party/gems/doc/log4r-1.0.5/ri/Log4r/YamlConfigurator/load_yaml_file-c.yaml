@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Given a filename, loads the YAML configuration for Log4r.
+full_name: Log4r::YamlConfigurator::load_yaml_file
+is_singleton: true
+name: load_yaml_file
+params: ( filename)
+visibility: public

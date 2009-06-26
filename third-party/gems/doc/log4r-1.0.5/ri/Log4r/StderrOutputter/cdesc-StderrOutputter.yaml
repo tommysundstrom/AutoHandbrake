@@ -1,0 +1,22 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Same as IOOutputter(name, $stderr)
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Same as IOOutputter(name, $stderr)
+constants: []
+
+full_name: Log4r::StderrOutputter
+includes: []
+
+instance_methods: []
+
+name: StderrOutputter
+superclass: IOOutputter

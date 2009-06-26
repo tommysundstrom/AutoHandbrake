@@ -1,0 +1,24 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: See log4r/logserver.rb
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: See log4r/logserver.rb
+constants: []
+
+full_name: Log4r::RemoteOutputter
+includes: 
+- !ruby/object:RDoc::RI::IncludedModule 
+  name: ROMPClient
+instance_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: flush
+name: RemoteOutputter
+superclass: Outputter

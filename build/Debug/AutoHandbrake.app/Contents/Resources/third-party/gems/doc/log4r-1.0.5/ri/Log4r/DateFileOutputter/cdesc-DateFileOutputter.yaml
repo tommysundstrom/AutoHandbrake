@@ -1,0 +1,43 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "Additional hash arguments are:"
+- !ruby/object:RDoc::Markup::Flow::LIST 
+  contents: 
+  - !ruby/struct:RDoc::Markup::Flow::LI 
+    label: <tt>:dirname</tt>
+    body: Directory of the log file
+  - !ruby/struct:RDoc::Markup::Flow::LI 
+    label: <tt>:date_pattern</tt>
+    body: Time.strftime format string (default is &quot;%Y-%m-%d&quot;)
+  type: :LABELED
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "Additional hash arguments are:"
+- !ruby/object:RDoc::Markup::Flow::LIST 
+  contents: 
+  - !ruby/struct:RDoc::Markup::Flow::LI 
+    label: <tt>:dirname</tt>
+    body: Directory of the log file
+  - !ruby/struct:RDoc::Markup::Flow::LI 
+    label: <tt>:date_pattern</tt>
+    body: Time.strftime format string (default is &quot;%Y-%m-%d&quot;)
+  type: :LABELED
+constants: 
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: DEFAULT_DATE_FMT
+  value: "\"%Y-%m-%d\""
+full_name: Log4r::DateFileOutputter
+includes: []
+
+instance_methods: []
+
+name: DateFileOutputter
+superclass: FileOutputter

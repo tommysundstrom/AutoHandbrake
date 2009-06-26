@@ -1,0 +1,34 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: "[]"
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: "[]="
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: custom_levels
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: load_xml_file
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: load_xml_string
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: See log4r/configurator.rb
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: See log4r/configurator.rb
+constants: 
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: ExcludeParams
+  value: "%w{formatter level name type}"
+full_name: Log4r::Configurator
+includes: 
+- !ruby/object:RDoc::RI::IncludedModule 
+  name: REXML
+instance_methods: []
+
+name: Configurator
+superclass: Object

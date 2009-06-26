@@ -1,0 +1,36 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: RootLogger should be retrieved with Logger.root or Logger.global. It's supposed to be transparent.
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: RootLogger should be retrieved with Logger.root or Logger.global. It's supposed to be transparent.
+constants: []
+
+full_name: Log4r::RootLogger
+includes: 
+- !ruby/object:RDoc::RI::IncludedModule 
+  name: Singleton
+instance_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: add
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: additive=
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: is_root?
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: level=
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: outputters=
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: remove
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: trace=
+name: RootLogger
+superclass: Logger

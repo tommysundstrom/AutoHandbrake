@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Call flush to send any remaining LogEvents to the remote server.
+full_name: Log4r::RemoteOutputter#flush
+is_singleton: false
+name: flush
+params: ()
+visibility: public

@@ -1,0 +1,24 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: There are 3 hash arguments
+- !ruby/object:RDoc::Markup::Flow::LIST 
+  contents: 
+  - !ruby/struct:RDoc::Markup::Flow::LI 
+    label: <tt>:ident</tt>
+    body: syslog ident, defaults to _name
+  - !ruby/struct:RDoc::Markup::Flow::LI 
+    label: <tt>:logopt</tt>
+    body: syslog logopt, defaults to LOG_PID | LOG_CONS
+  - !ruby/struct:RDoc::Markup::Flow::LI 
+    label: <tt>:facility</tt>
+    body: syslog facility, defaults to LOG_USER
+  type: :LABELED
+full_name: Log4r::SyslogOutputter::new
+is_singleton: true
+name: new
+params: (_name, hash={})
+visibility: public

@@ -1,0 +1,29 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: IO Outputter invokes print then flush on the wrapped IO object. If the IO stream dies, IOOutputter sets itself to OFF and the system continues on its merry way.
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: To find out why an IO stream died, create a logger named 'log4r' and look at the output.
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: IO Outputter invokes print then flush on the wrapped IO object. If the IO stream dies, IOOutputter sets itself to OFF and the system continues on its merry way.
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: To find out why an IO stream died, create a logger named 'log4r' and look at the output.
+constants: []
+
+full_name: Log4r::IOOutputter
+includes: []
+
+instance_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: close
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: closed?
+name: IOOutputter
+superclass: Outputter

@@ -1,0 +1,47 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: 
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  name: filename
+  rw: R
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  name: trunc
+  rw: R
+class_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "Convenience wrapper for File. Additional hash arguments are:"
+- !ruby/object:RDoc::Markup::Flow::LIST 
+  contents: 
+  - !ruby/struct:RDoc::Markup::Flow::LI 
+    label: <tt>:filename</tt>
+    body: Name of the file to log to.
+  - !ruby/struct:RDoc::Markup::Flow::LI 
+    label: <tt>:trunc</tt>
+    body: Truncate the file?
+  type: :LABELED
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "Convenience wrapper for File. Additional hash arguments are:"
+- !ruby/object:RDoc::Markup::Flow::LIST 
+  contents: 
+  - !ruby/struct:RDoc::Markup::Flow::LI 
+    label: <tt>:filename</tt>
+    body: Name of the file to log to.
+  - !ruby/struct:RDoc::Markup::Flow::LI 
+    label: <tt>:trunc</tt>
+    body: Truncate the file?
+  type: :LABELED
+constants: []
+
+full_name: Log4r::FileOutputter
+includes: []
+
+instance_methods: []
+
+name: FileOutputter
+superclass: IOOutputter

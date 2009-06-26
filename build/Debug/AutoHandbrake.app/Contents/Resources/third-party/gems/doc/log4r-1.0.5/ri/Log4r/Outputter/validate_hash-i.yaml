@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Validates the common hash arguments. For now, that would be <tt>:level</tt>, <tt>:formatter</tt> and the string equivalents
+full_name: Log4r::Outputter#validate_hash
+is_singleton: false
+name: validate_hash
+params: (hash)
+visibility: protected

@@ -1,0 +1,51 @@
+--- !ruby/object:RDoc::RI::ModuleDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: " :nodoc:\n Version:: $Id: config.rb,v 1.9 2002/01/28 16:05:04 cepheus Exp $\n ---\n TODO: catch unparsed parameters #{FOO} and die\n ---\n"
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: ":nodoc:"
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: " ---\n"
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: ":nodoc:"
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: " ---\n :nodoc:\n ---\n :nodoc:\n ---\n :nodoc:\n"
+constants: 
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: ALL
+  value: "0"
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: LNAMES
+  value: "['ALL']"
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: HAVE_ROMP
+  value: "true"
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: HAVE_ROMP
+  value: "false"
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: HAVE_REXML
+  value: "true"
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: HAVE_REXML
+  value: "false"
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: Log4rVersion
+  value: "[1, 0, 1].join '.'"
+full_name: Log4r
+includes: []
+
+instance_methods: []
+
+name: Log4r

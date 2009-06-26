@@ -1,0 +1,30 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "SimpleFormatter produces output like this:"
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: "  WARN loggername&gt; Danger, Will Robinson, danger!\n"
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Does not write traces and does not inspect objects.
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "SimpleFormatter produces output like this:"
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: "  WARN loggername&gt; Danger, Will Robinson, danger!\n"
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Does not write traces and does not inspect objects.
+constants: []
+
+full_name: Log4r::SimpleFormatter
+includes: []
+
+instance_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: format
+name: SimpleFormatter
+superclass: Formatter

@@ -1,0 +1,33 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: "[]"
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: "[]="
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: custom_levels
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: load_yaml_file
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: load_yaml_string
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: See log4r/yamlconfigurator.rb
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: See log4r/yamlconfigurator.rb
+constants: 
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: ExcludeParams
+  value: "%w{formatter level name type only_at}"
+full_name: Log4r::YamlConfigurator
+includes: []
+
+instance_methods: []
+
+name: YamlConfigurator
+superclass: Object

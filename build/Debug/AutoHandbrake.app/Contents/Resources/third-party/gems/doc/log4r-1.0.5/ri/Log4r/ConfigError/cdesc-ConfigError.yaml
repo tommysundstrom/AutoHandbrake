@@ -1,0 +1,21 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Gets raised when Configurator encounters bad YAML.
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Gets raised when Configurator encounters bad YAML.
+constants: []
+
+full_name: Log4r::ConfigError
+includes: []
+
+instance_methods: []
+
+name: ConfigError
+superclass: Exception

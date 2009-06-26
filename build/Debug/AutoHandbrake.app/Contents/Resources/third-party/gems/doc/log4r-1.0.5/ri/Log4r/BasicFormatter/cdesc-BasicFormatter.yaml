@@ -1,0 +1,57 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "BasicFormatter produces output like this:"
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: "  WARN loggername: I dropped my Wookie!\n"
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "Or like this if trace is on:"
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: "  WARN loggername(file.rb at 12): Hot potato!\n"
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Also, it will pretty-print any Exception it gets and <tt>inspect</tt> everything else.
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "Hash arguments include:"
+- !ruby/object:RDoc::Markup::Flow::LIST 
+  contents: 
+  - !ruby/struct:RDoc::Markup::Flow::LI 
+    label: "+depth+:"
+    body: How many lines of the stacktrace to display.
+  type: :NOTE
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "BasicFormatter produces output like this:"
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: "  WARN loggername: I dropped my Wookie!\n"
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "Or like this if trace is on:"
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: "  WARN loggername(file.rb at 12): Hot potato!\n"
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Also, it will pretty-print any Exception it gets and <tt>inspect</tt> everything else.
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "Hash arguments include:"
+- !ruby/object:RDoc::Markup::Flow::LIST 
+  contents: 
+  - !ruby/struct:RDoc::Markup::Flow::LI 
+    label: "+depth+:"
+    body: How many lines of the stacktrace to display.
+  type: :NOTE
+constants: []
+
+full_name: Log4r::BasicFormatter
+includes: []
+
+instance_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: format
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: format_object
+name: BasicFormatter
+superclass: SimpleFormatter

@@ -1,0 +1,55 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: 
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  name: count
+  rw: R
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  name: maxsize
+  rw: R
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  name: maxtime
+  rw: R
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  name: startTime
+  rw: R
+class_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "RollingFileOutputter - subclass of FileOutputter that rolls files on size or time. Additional hash arguments are:"
+- !ruby/object:RDoc::Markup::Flow::LIST 
+  contents: 
+  - !ruby/struct:RDoc::Markup::Flow::LI 
+    label: <tt>:maxsize</tt>
+    body: Maximum size of the file in bytes.
+  - !ruby/struct:RDoc::Markup::Flow::LI 
+    label: <tt>:trunc</tt>
+    body: Maximum age of the file in seconds.
+  type: :LABELED
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "RollingFileOutputter - subclass of FileOutputter that rolls files on size or time. Additional hash arguments are:"
+- !ruby/object:RDoc::Markup::Flow::LIST 
+  contents: 
+  - !ruby/struct:RDoc::Markup::Flow::LI 
+    label: <tt>:maxsize</tt>
+    body: Maximum size of the file in bytes.
+  - !ruby/struct:RDoc::Markup::Flow::LI 
+    label: <tt>:trunc</tt>
+    body: Maximum age of the file in seconds.
+  type: :LABELED
+constants: []
+
+full_name: Log4r::RollingFileOutputter
+includes: []
+
+instance_methods: []
+
+name: RollingFileOutputter
+superclass: FileOutputter

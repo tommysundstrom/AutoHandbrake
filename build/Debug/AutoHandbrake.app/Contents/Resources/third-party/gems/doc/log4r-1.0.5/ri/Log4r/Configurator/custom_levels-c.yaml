@@ -1,0 +1,18 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Sets the custom levels. This method accepts symbols or strings.
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: "  Configurator.custom_levels('My', 'Custom', :Levels)\n"
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "Alternatively, you can specify custom levels in XML:"
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: "  &lt;log4r_config&gt;\n    &lt;pre_config&gt;\n      &lt;custom_levels&gt;\n        My, Custom, Levels\n      &lt;/custom_levels&gt;\n      ...\n"
+full_name: Log4r::Configurator::custom_levels
+is_singleton: true
+name: custom_levels
+params: (*levels)
+visibility: public

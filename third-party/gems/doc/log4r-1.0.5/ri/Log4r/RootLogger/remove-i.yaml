@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Does nothing
+full_name: Log4r::RootLogger#remove
+is_singleton: false
+name: remove
+params: (*foo)
+visibility: public

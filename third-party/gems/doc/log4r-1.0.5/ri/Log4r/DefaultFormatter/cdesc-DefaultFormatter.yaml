@@ -1,0 +1,21 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Outputters that don't define a Formatter will get this, which is currently BasicFormatter
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Outputters that don't define a Formatter will get this, which is currently BasicFormatter
+constants: []
+
+full_name: Log4r::DefaultFormatter
+includes: []
+
+instance_methods: []
+
+name: DefaultFormatter
+superclass: BasicFormatter

@@ -1,0 +1,14 @@
+--- !ruby/object:RDoc::RI::ModuleDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Log4r::ROMPClient
+includes: []
+
+instance_methods: []
+
+name: ROMPClient

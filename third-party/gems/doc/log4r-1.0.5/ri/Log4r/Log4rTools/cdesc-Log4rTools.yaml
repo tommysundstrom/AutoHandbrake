@@ -1,0 +1,28 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: comma_split
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: decode_bool
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: valid_level?
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: validate_level
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Some common functions
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Some common functions
+constants: []
+
+full_name: Log4r::Log4rTools
+includes: []
+
+instance_methods: []
+
+name: Log4rTools
+superclass: Object

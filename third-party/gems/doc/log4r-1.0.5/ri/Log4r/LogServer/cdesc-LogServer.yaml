@@ -1,0 +1,26 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: 
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  name: uri
+  rw: R
+class_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: See log4r/logserver.rb
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: See log4r/logserver.rb
+constants: []
+
+full_name: Log4r::LogServer
+includes: 
+- !ruby/object:RDoc::RI::IncludedModule 
+  name: ROMPServer
+instance_methods: []
+
+name: LogServer
+superclass: Logger

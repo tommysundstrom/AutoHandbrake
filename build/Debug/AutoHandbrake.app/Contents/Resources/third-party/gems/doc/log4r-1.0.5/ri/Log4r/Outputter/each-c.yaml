@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: name, outputter
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Yields each outputter's name and reference.
+full_name: Log4r::Outputter::each
+is_singleton: true
+name: each
+params: () {|name, outputter| ...}
+visibility: public

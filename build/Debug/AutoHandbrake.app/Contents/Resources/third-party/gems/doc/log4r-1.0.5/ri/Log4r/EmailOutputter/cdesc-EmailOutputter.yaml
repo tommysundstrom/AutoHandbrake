@@ -1,0 +1,40 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: 
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  name: acct
+  rw: R
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  name: authtype
+  rw: R
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  name: domain
+  rw: R
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  name: port
+  rw: R
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  name: server
+  rw: R
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  name: subject
+  rw: R
+class_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: new
+comment: 
+constants: []
+
+full_name: Log4r::EmailOutputter
+includes: []
+
+instance_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: flush
+name: EmailOutputter
+superclass: Outputter

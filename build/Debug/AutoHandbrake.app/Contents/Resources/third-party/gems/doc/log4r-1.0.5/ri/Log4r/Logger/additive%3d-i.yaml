@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Set the additivity of the logger dynamically. True or false.
+full_name: Log4r::Logger#additive=
+is_singleton: false
+name: additive=
+params: (_additive)
+visibility: public
