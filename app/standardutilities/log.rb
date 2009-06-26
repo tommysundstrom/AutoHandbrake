@@ -17,12 +17,27 @@ require 'log4r'
   LOG_DIRECTORY.mkpath # Makes sure the path exists
   
   logdir = Pathstring(LOG_DIRECTORY)
-  logdir.children.each do |file| 
-    unless Pathstring(file).basename.scan(/rolling/)[0] # Note: This depends on the convention to include 'rolling' in the name of persistent files. TODO: Remove older rolling logs.
-      # If it is not a persistent log
-      #   remove it
-      puts "Removing log: #{file.basename}"
-      file.unlink
+  clean_out_log_directory(logdir)
+
+  def clean_out_log_directory(dir)
+    Pathstring(dir).children.each do |item|
+      if item.directory?
+        # First clean out inside the directory
+        clean_out_log_directory(item)
+
+        # Then, if it is empty, delete it
+        if item.empty?
+          OSX::NSLog "Removing directory: #{file.basename}"
+          item.unlink          
+        end
+      else # Not a directory, so a normal file
+        unless Pathstring(file).basename.scan(/rolling/)[0] # Note: This depends on the convention to include 'rolling' in the name of persistent files. TODO: Remove older rolling logs.
+        # If it is not a persistent log
+        #   remove it
+        OSX::NSLog "Removing log: #{file.basename}"
+        file.unlink
+      end
+
     end
   end
 
@@ -116,8 +131,20 @@ class Log #< OSX::NSObject
         id = "_#{@logname}"
         filename = @logname
       end
-      
-      return FileOutputter.new("output_all#{id}", :filename => (LOG_DIRECTORY + "#{filename}.log").to_s, :formatter => FORMATTER) 
+
+      OSX::NSLog "---"
+      OSX::NSLog "LOG_DIRECTORY: #{LOG_DIRECTORY}"
+      OSX::NSLog "id: #{id}"
+      OSX::NSLog "filename: #{(LOG_DIRECTORY + "#{filename}.log").to_s}"
+      OSX::NSLog "pwd: #{Dir.pwd}"
+
+      f = Pathstring(LOG_DIRECTORY + "#{filename}.log")
+      d = f.dirname
+      OSX::NSLog "d.exist?  #{d.exist?}"
+      Pathstring((LOG_DIRECTORY + "#{filename}.log")).mkpath # Making sure the directory exists.
+      outputter = FileOutputter.new("output_all#{id}", :filename => (LOG_DIRECTORY + "#{filename}.log").to_s, :formatter => FORMATTER)
+      OSX::NSLog "--- gick ok ---"
+      return outputter
     end
       
   

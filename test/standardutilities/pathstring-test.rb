@@ -6,18 +6,10 @@
 #  Copyright (c) 2009 Helt Enkelt ab. All rights reserved.
 #
 
-#require 'test/unit' 
-#require 'test-setup/testsetup'
-#$log.info "RUNNING TEST: #{File.basename(__FILE__)}"
-require 'pathname'
-#require 'test-tools/util'
-#require 'test-tools/stock-classes'
-
-#require 'third-party/lib/pathstring.rb' # Makes little sens, but is the only workaround I've found
-
-require 'test_setup'
+require File.expand_path("#{File.dirname(__FILE__)}/test_setup")
 require 'log'
-###Log.debug "#{File.basename(__FILE__)} required."
+Log.info "RUNNING TEST: #{File.basename(__FILE__)}"
+require 'pathname'
 
 
 # Något i den här knäcker rake-testen, som bara kraschar utan egentlig anledning.
@@ -205,7 +197,7 @@ class PathstringTests < Test::Unit::TestCase
   
   context "Application name." do
     should "Be able to extract the application name when runed from rake" do
-      assert { Pathstring.new(__FILE__).application_name == 'FlatTemplate' }
+      assert { Pathstring.new(__FILE__).application_name == 'AutoHandbrake' }
     end
     
     should "Extract application name from a file in the application, when given the unit-test path." do
