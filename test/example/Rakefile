@@ -19,6 +19,8 @@ require File.expand_path("#{dir_containing('path-setting.rb')}/path-setting")
 task :default => [:test]
 desc "Run tests."
 Rake::TestTask.new do | t |
+  t.libs << Dir.pwd   # paths to att to the $LOAD_PATH for the tests  ### Temp. fix for problems probably caused by
+        # changing the pwd in test_setup.rb
   t.test_files = FileList['**/*tests.rb'] + FileList['**/*test.rb']
 end
 
