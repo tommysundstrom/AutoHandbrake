@@ -7,9 +7,9 @@
 #
 
 require File.expand_path("#{File.dirname(__FILE__)}/test_setup")
-#require 'log'
-#Log.info "RUNNING TEST: #{File.basename(__FILE__)}"
-#require 'pathname'
+require 'log'
+Log.info "RUNNING TEST: #{File.basename(__FILE__)}"
+require 'pathname'
 
 
 # Något i den här knäcker rake-testen, som bara kraschar utan egentlig anledning.

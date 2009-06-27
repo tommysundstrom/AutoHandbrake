@@ -9,15 +9,10 @@
 require File.expand_path("#{File.dirname(__FILE__)}/test_setup")
 
 
-
 class TC_Log_test < Test::Unit::TestCase
 
   context "Log --" do
-
-    setup do
-      require 'log'
-    end
-
+  
     context "Debug log. Log.level 'Message' --" do    
       should "Log in the form Log.debug 'message'." do
         assert_nothing_raised { Log.debug "Log.debug message" }
@@ -86,5 +81,5 @@ class TC_Log_test < Test::Unit::TestCase
         end
       end # /context "Log created for the current file --" do  
     end # /context "Class as log. Log.debug 'Message' --" do  
-  end # /context "Log --" do
+  end # /context "Log --" do  
 end # /class Log_test

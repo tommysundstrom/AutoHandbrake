@@ -13,9 +13,6 @@ parent = File.dirname(context)
 parent_name = File.basename(parent)
 grandparent = File.dirname(parent)
 
-Dir.chdir(parent)  # I'm not quite sure about this. But it's at least better than the rather random arrangement today.
-      # I suspect this is what causes problems for the Rake-file when there is more than one test. 
-
 require 'osx/cocoa'
 # OSX::NSLog "Running test_setup: #{context}"
 
