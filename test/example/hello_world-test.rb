@@ -6,7 +6,7 @@
 #  Copyright (c) 2009 Helt Enkelt ab. All rights reserved.
 #
 
-require File.expand_path("#{File.dirname(__FILE__)}/test_setup")
+require File.expand_path("#{File.dirname(__FILE__)}/test_setup.rb")
 
 class TC_HelloWorld_test < Test::Unit::TestCase
   def setup

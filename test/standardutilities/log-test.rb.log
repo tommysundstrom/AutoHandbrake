@@ -1,0 +1,6 @@
+2009-06-27 00:54:48 [DEBUG] debug on a log crated with /Users/Tommy/Programmering/Ruby/Projekt/AutoHandbrake/test/standardutilities/log-test.rb
+2009-06-27 00:54:48 [DEBUG] Log.debug to a log crated with /Users/Tommy/Programmering/Ruby/Projekt/AutoHandbrake/test/standardutilities/log-test.rb
+2009-06-27 00:54:48 [ INFO] Log.info  to a log crated with /Users/Tommy/Programmering/Ruby/Projekt/AutoHandbrake/test/standardutilities/log-test.rb
+2009-06-27 00:54:48 [ WARN] Log.warn to a log crated with /Users/Tommy/Programmering/Ruby/Projekt/AutoHandbrake/test/standardutilities/log-test.rb
+2009-06-27 00:54:48 [ERROR] Log.error to a log crated with /Users/Tommy/Programmering/Ruby/Projekt/AutoHandbrake/test/standardutilities/log-test.rb
+2009-06-27 00:54:48 [FATAL] Log.fatal to a log crated with /Users/Tommy/Programmering/Ruby/Projekt/AutoHandbrake/test/standardutilities/log-test.rb

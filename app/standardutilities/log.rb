@@ -12,19 +12,36 @@ require 'log4r'
 
 
 # When this source file is loaded, it cleans out old logs.
-  APPLICATION_NAME = Pathstring.new(__FILE__).application_name  # Code here is same as used inside class
-  LOG_DIRECTORY = Pathstring("~/Library/Logs/Ruby/#{APPLICATION_NAME}").expand_path 
-  LOG_DIRECTORY.mkpath # Makes sure the path exists
-  
-  logdir = Pathstring(LOG_DIRECTORY)
-  logdir.children.each do |file| 
-    unless Pathstring(file).basename.scan(/rolling/)[0] # Note: This depends on the convention to include 'rolling' in the name of persistent files. TODO: Remove older rolling logs.
-      # If it is not a persistent log
-      #   remove it
-      puts "Removing log: #{file.basename}"
-      file.unlink
+  def clean_out_log_directory(dir)
+    Pathstring(dir).children.each do |item|
+      if item.directory?
+       # First clean out inside the directory
+       clean_out_log_directory(item)
+
+       # Then, if it is empty, delete it
+       if item.empty?
+         OSX::NSLog "Removing directory: #{file.basename}"
+         item.unlink
+       end
+     else # Not a directory, so a normal file
+       unless Pathstring(item).basename.scan(/rolling/)[0] # Note: This depends on the convention to include 'rolling' in the name of persistent files. TODO: Remove older rolling logs.
+         # If it is not a persistent log
+         #   remove it
+         OSX::NSLog "Removing log: #{item.basename}"
+         item.unlink
+       end
+     end
     end
   end
+
+
+  app_name = Pathstring.new(__FILE__).application_name  # Code here is same as used inside class
+  log_directory = Pathstring("~/Library/Logs/Ruby/#{app_name}").expand_path
+  log_directory.mkpath # Makes sure the path exists
+  
+  logdir = Pathstring(log_directory)
+  clean_out_log_directory(logdir)
+
 
 # Log
 #
@@ -44,13 +61,13 @@ class Log #< OSX::NSObject
   include Log4r
   
   # Constants
-    APPLICATION_NAME = Pathstring.new(__FILE__).application_name    
-    FORMATTER = PatternFormatter.new(:pattern => "%d [%5l] %m")  # Format for log entries
-    ROLLOVER_TIME = 60*60*24    # 24 h in seconds.
-    ROLLOVER_SIZE = 100000
+    @@app_name = Pathstring.new(__FILE__).application_name
+    @@formatter = PatternFormatter.new(:pattern => "%d [%5l] %m")  # Format for log entries
+    @@rollover_time = 60*60*24    # 24 h in seconds.
+    @@rollover_size = 100000
     # TODO: Should remove session logs from previous sessions (on class initiation or in setup)
-    LOG_DIRECTORY = Pathstring("~/Library/Logs/Ruby/#{APPLICATION_NAME}").expand_path 
-    LOG_DIRECTORY.mkpath # Makes sure the path exists
+    @@log_directory = Pathstring("~/Library/Logs/Ruby/#{@@app_name}").expand_path
+    @@log_directory.mkpath # Makes sure the path exists
     
   # Class variables
     @@logs = {}
@@ -78,10 +95,10 @@ class Log #< OSX::NSObject
     
     # General output, a session log that collects all. TODO: Change format 
           # so that it's possible to see what log has written what.
-      log.outputters << FileOutputter.new('output_all', :filename => (LOG_DIRECTORY + "_all.log").to_s, :formatter => FORMATTER) 
+      log.outputters << FileOutputter.new('output_all', :filename => (@@log_directory + "_all.log").to_s, :formatter => @@formatter)
       
     # General warnings. A warnings and errors log that all logs are writing to
-      log.outputters << FileOutputter.new('output_warn', :filename => (LOG_DIRECTORY + "WARNINGS & ERRORS.log").to_s, :formatter => FORMATTER, :level => WARN )
+      log.outputters << FileOutputter.new('output_warn', :filename => (@@log_directory + "WARNINGS & ERRORS.log").to_s, :formatter => @@formatter, :level => WARN )
       
     #log.outputters.each{|t| puts t.name}  # TEST
       
@@ -103,8 +120,8 @@ class Log #< OSX::NSObject
       outputter.level = INFO
     
     # Rolling log with INFO+
-      @@logs[:default].outputters << RollingFileOutputter.new('output_rolling_info', :filename => (LOG_DIRECTORY + "_info-rolling-.log").to_s, :trunc => false, :formatter => FORMATTER, :maxsize => ROLLOVER_SIZE, :level => INFO )
-      (LOG_DIRECTORY + "_info-rolling-.log").unlink     # Remove empty log (created but not used, as some kind of sideffect of 'maxsize')
+      @@logs[:default].outputters << RollingFileOutputter.new('output_rolling_info', :filename => (@@log_directory + "_info-rolling-.log").to_s, :trunc => false, :formatter => @@formatter, :maxsize => @@rollover_size, :level => INFO )
+      (@@log_directory + "_info-rolling-.log").unlink     # Remove empty log (created but not used, as some kind of sideffect of 'maxsize')
   end
 
   # Outputters doc: http://log4r.sourceforge.net/rdoc/files/log4r/outputter/outputter_rb.html
@@ -116,8 +133,15 @@ class Log #< OSX::NSObject
         id = "_#{@logname}"
         filename = @logname
       end
-      
-      return FileOutputter.new("output_all#{id}", :filename => (LOG_DIRECTORY + "#{filename}.log").to_s, :formatter => FORMATTER) 
+
+      # Making sure the directory exists.
+      f = Pathstring(@@log_directory + "#{filename}.log")
+      d = f.dirname
+      Pathstring(d).mkpath
+
+      # Creating outputter
+      outputter = FileOutputter.new("output_all#{id}", :filename => (@@log_directory + "#{filename}.log").to_s, :formatter => @@formatter)
+      return outputter     
     end
       
   
