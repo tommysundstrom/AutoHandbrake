@@ -36,7 +36,10 @@ $: << RubyCocoaLocations.root_for_ruby_files   # To load files like 'test/util'
 $: << '.'
 
 require 'test/unit'
-require 'Shoulda'
+require 'shoulda'
+require 'shoulda'
+require 'assert2'
+
 RubyCocoaLocations.load_ruby_files
 
 require 'flexmock/test_unit'

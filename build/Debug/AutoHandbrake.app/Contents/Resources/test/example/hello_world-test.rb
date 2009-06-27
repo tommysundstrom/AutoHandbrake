@@ -6,29 +6,18 @@
 #  Copyright (c) 2009 Helt Enkelt ab. All rights reserved.
 #
 
-require 'test/unit'
-require 'rubygems'
-require 'shoulda'
-require 'assert2'
-
-
+require File.expand_path("#{File.dirname(__FILE__)}/test_setup.rb")
 
 class TC_HelloWorld_test < Test::Unit::TestCase
   def setup
     # Log.debug "Sets up a #{File.basename(__FILE__)} test."
+    require 'example/hello_world'
   end
 
-  context "Test." do
-    should "Assert true." do
-      assert {true}
+  context "Initialize - " do
+    should "Initialize." do
+      HelloWorld.new
     end
-    
-    #should "Deny false." do
-    #  deny {false}
-    #end
-    
-    #should "Fail this." do
-    #   assert {false}
-    #end
   end
+  
 end

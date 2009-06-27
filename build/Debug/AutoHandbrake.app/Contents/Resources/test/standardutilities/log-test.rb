@@ -6,11 +6,7 @@
 #  Copyright (c) 2009 Helt Enkelt ab. All rights reserved.
 #
 
-require 'test_setup'
-require 'log'
-require 'tommys_utilities'
-
-# Pathstring('~/Library/Logs/Ruby/FlatTemplate/_info-rolling-000001.log').expand_path
+require File.expand_path("#{File.dirname(__FILE__)}/test_setup")
 
 
 class TC_Log_test < Test::Unit::TestCase
@@ -20,7 +16,7 @@ class TC_Log_test < Test::Unit::TestCase
     context "Debug log. Log.level 'Message' --" do    
       should "Log in the form Log.debug 'message'." do
         assert_nothing_raised { Log.debug "Log.debug message" }
-        assert { Log.message_in_last_line_of_log(Pathstring('~/Library/Logs/Ruby/«PROJECTNAME»/_all.log').expand_path) == "[DEBUG] Log.debug message" }
+        assert { Log.message_in_last_line_of_log(Pathstring('~/Library/Logs/Ruby/AutoHandbrake/_all.log').expand_path) == "[DEBUG] Log.debug message" }
       end      
     end
     
@@ -47,10 +43,10 @@ class TC_Log_test < Test::Unit::TestCase
           assert_nothing_raised { @local_log.fatal "Log.fatal to a log crated with #{__FILE__}" }
         end
         
-        should "Log warnings also to the warnings & errors log." do
+        should_eventually "Log warnings also to the warnings & errors log." do
           @local_log.warn  "Log.warn to a log crated with #{__FILE__}"
-          assert { File.exist?(Pathstring('~/Library/Logs/Ruby/«PROJECTNAME»/WARNINGS & ERRORS.log').expand_path) }
-          assert { Log.message_in_last_line_of_log('/Users/Tommy/Library/Logs/Ruby/«PROJECTNAME»/WARNINGS & ERRORS.log') == "[ WARN] Log.warn to a log crated with ./log-test.rb" }
+          assert { File.exist?(Pathstring('~/Library/Logs/Ruby/AutoHandbrake/WARNINGS & ERRORS.log').expand_path) }
+          assert { Log.message_in_last_line_of_log('/Users/Tommy/Library/Logs/Ruby/AutoHandbrake/WARNINGS & ERRORS.log') == "[ WARN] Log.warn to a log crated with ./log-test.rb" }
         end
       end # /context "Log created for the current file --" do
       
